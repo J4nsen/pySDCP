@@ -201,7 +201,21 @@ class Projector:
             return False
         else:
             return True
-
+            
+    def set_calibration_preset(self, calibration_preset: str):
+        if calibration_preset not in CALIBRATION_PRESETS:
+            raise ValueError("Calibration preset not found")
+        else:
+            self._send_command(action=ACTIONS["SET"], command=COMMANDS["CALIBRATION_PRESET"],
+                               data=CALIBRATION_PRESETS[calibration_preset])
+        return True
+    
+    def get_calibration_preset(self):
+        data = self._send_command(action=ACTIONS["GET"], command=COMMANDS["CALIBRATION_PRESET"])
+        for key, value in CALIBRATION_PRESETS.items():
+            if value == data:
+                return key
+        return "UNKNOWN_CALIBRATION_PRESET_"+str(data)
 
 if __name__ == '__main__':
     # b = Projector()
