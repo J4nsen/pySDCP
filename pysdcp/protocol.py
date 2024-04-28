@@ -55,3 +55,15 @@ POWER_STATUS = {
     "COOLING": 4,
     "COOLING2": 5
 }
+
+CALIBRATION_PRESETS = {
+    "CINEMA_FILM_1": 0x0000,
+    "CINEMA_FILM_2": 0x0001,
+    "REFERENCE": 0x0002,
+    "TV": 0x0003,
+    "PHOTO": 0x0004,
+    "GAME": 0x0005,
+    "BRIGHT_CINEMA": 0x0006,
+    "BRIGHT_TV": 0x0007,
+    "USER": 0x0008,
+}
