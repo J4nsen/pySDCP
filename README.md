@@ -31,6 +31,7 @@ Supported Sony projectors should include:
 * VPL-VW520
 * VPL-VW528
 * VPL-VW665
+* VPL-XW5000
 
 
 
